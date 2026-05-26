@@ -16,8 +16,10 @@ spring:
     username : root
     password :
 
-    platform : mysql
-    initialization-mode : always
+  sql:
+    init:
+      mode: always
+      platform: mysql
 
   data :
     rest :
