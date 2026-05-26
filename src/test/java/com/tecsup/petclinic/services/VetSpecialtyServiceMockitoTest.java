@@ -37,6 +37,7 @@ public class VetSpecialtyServiceMockitoTest {
      * Simula que el vet y la specialty existen y que la relación aún no está asignada.
      * Verifica que save() se invoca y que el resultado tiene los IDs correctos.
      */
+
     @Test
     public void testAssignSpecialtyToVet() {
 
