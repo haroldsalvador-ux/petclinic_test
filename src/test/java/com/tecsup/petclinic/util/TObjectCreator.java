@@ -2,6 +2,8 @@ package com.tecsup.petclinic.util;
 
 import com.tecsup.petclinic.dtos.PetDTO;
 import com.tecsup.petclinic.entities.Pet;
+import com.tecsup.petclinic.entities.Specialty;
+import com.tecsup.petclinic.entities.Vet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,5 +81,29 @@ public class TObjectCreator {
 		pets.add(new Pet(12,"Lucky",2,10, null));
 		pets.add(new Pet(13,"Sly",1,10, null));
 		return pets;
+	}
+
+	// ── Vet factories ────────────────────────────────────────────────────────
+
+	public static Vet getVetWithNoSpecialties() {
+		return new Vet(1, "James", "Carter", "james.carter@petclinic.com", "6085551234", true);
+	}
+
+	public static Vet getVetWithSpecialty() {
+		return new Vet(2, "Helen", "Leary", "helen.leary@petclinic.com", "6085552345", true);
+	}
+
+	// ── Specialty factories ───────────────────────────────────────────────────
+
+	public static Specialty getSpecialtyRadiology() {
+		return new Specialty(1, "radiology", "Farewell", 8, 18);
+	}
+
+	public static Specialty getSpecialtySurgery() {
+		return new Specialty(2, "surgery", "Maryland", 8, 12);
+	}
+
+	public static Specialty getSpecialtyDentistry() {
+		return new Specialty(3, "dentistry", "Terranova", 9, 19);
 	}
 }
